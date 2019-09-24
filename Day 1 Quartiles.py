@@ -30,10 +30,10 @@ def oddQuartiles (fnumberOfArrayElements, felementsInArray):
     upperhalflowerlimit=int((fnumberOfArrayElements / 2) +1)
     #print(felementsInArray[:lowerhalfupperlimit])
     #print(lowerhalfupperlimit)
-    firstQuartile=median(lowerhalfupperlimit,felementsInArray[:lowerhalfupperlimit])
+    firstQuartile=int(median(lowerhalfupperlimit,felementsInArray[:lowerhalfupperlimit]))
     #print(felementsInArray[upperhalflowerlimit:])
     #print(upperhalflowerlimit)
-    thirdquartile=median(upperhalflowerlimit-1,felementsInArray[upperhalflowerlimit:])
+    thirdquartile=int(median(upperhalflowerlimit-1,felementsInArray[upperhalflowerlimit:]))
     return firstQuartile, thirdquartile
 
 #even quartiles
@@ -42,10 +42,10 @@ def evenQuartiles (fnumberOfArrayElements, felementsInArray):
     upperhalflowerlimit=int((fnumberOfArrayElements / 2))
     #print(felementsInArray[:lowerhalfupperlimit])
     #print(lowerhalfupperlimit)
-    firstQuartile=median(lowerhalfupperlimit,felementsInArray[:lowerhalfupperlimit])
+    firstQuartile=int(median(lowerhalfupperlimit,felementsInArray[:lowerhalfupperlimit]))
     #print(felementsInArray[upperhalflowerlimit:])
     #print(upperhalflowerlimit)
-    thirdquartile=median(upperhalflowerlimit,felementsInArray[upperhalflowerlimit:])
+    thirdquartile=int(median(upperhalflowerlimit,felementsInArray[upperhalflowerlimit:]))
     return firstQuartile, thirdquartile
 #quartiles answer Q1, Q2, Q3
 #print(isOdd(numberOfArrayElements))
