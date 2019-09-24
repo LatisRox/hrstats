@@ -14,7 +14,7 @@ def median(fnumberOfArrayElements, felementsInArray):
     else:
         odd = int((fnumberOfArrayElements / 2) -1)
         ev = int((fnumberOfArrayElements / 2)) 
-        return float(srtredlist[odd] + srtredlist[ev]) / float(2)
+        return int(float(srtredlist[odd] + srtredlist[ev]) / float(2))
 
 
 #odd or even number of elements
@@ -26,26 +26,28 @@ def isOdd(fnumberOfArrayElements):
 
 #odd quartiles
 def oddQuartiles (fnumberOfArrayElements, felementsInArray):
+    sortedElements=sorted(felementsInArray)
     lowerhalfupperlimit=int((fnumberOfArrayElements / 2) )
     upperhalflowerlimit=int((fnumberOfArrayElements / 2) +1)
     #print(felementsInArray[:lowerhalfupperlimit])
     #print(lowerhalfupperlimit)
-    firstQuartile=int(median(lowerhalfupperlimit,felementsInArray[:lowerhalfupperlimit]))
+    firstQuartile=int(median(lowerhalfupperlimit,sortedElements[:lowerhalfupperlimit]))
     #print(felementsInArray[upperhalflowerlimit:])
     #print(upperhalflowerlimit)
-    thirdquartile=int(median(upperhalflowerlimit-1,felementsInArray[upperhalflowerlimit:]))
+    thirdquartile=int(median(upperhalflowerlimit-1,sortedElements[upperhalflowerlimit:]))
     return firstQuartile, thirdquartile
 
 #even quartiles
 def evenQuartiles (fnumberOfArrayElements, felementsInArray):
+    sortedElements=sorted(felementsInArray)
     lowerhalfupperlimit=int((fnumberOfArrayElements / 2))
     upperhalflowerlimit=int((fnumberOfArrayElements / 2))
     #print(felementsInArray[:lowerhalfupperlimit])
     #print(lowerhalfupperlimit)
-    firstQuartile=int(median(lowerhalfupperlimit,felementsInArray[:lowerhalfupperlimit]))
+    firstQuartile=int(median(lowerhalfupperlimit,sortedElements[:lowerhalfupperlimit]))
     #print(felementsInArray[upperhalflowerlimit:])
     #print(upperhalflowerlimit)
-    thirdquartile=int(median(upperhalflowerlimit,felementsInArray[upperhalflowerlimit:]))
+    thirdquartile=int(median(upperhalflowerlimit,sortedElements[upperhalflowerlimit:]))
     return firstQuartile, thirdquartile
 #quartiles answer Q1, Q2, Q3
 #print(isOdd(numberOfArrayElements))
